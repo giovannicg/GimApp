@@ -4,7 +4,8 @@
   "description": "crud application with express and mongodb",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start": "node index.js"
   },
   "keywords": [
     "crud",
