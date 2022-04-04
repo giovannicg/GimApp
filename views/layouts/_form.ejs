@@ -1,42 +1,57 @@
  <!-- form handling -->
  <form action="/api/users" method="POST" id="add_user">
-    <div class="new_user">
-        <div class="form-group">
-            <label for="name" class="text-light">Name</label>
-            <input type="hidden" name="id" value="">
-            <input type="text" name="name" value="" placeholder="Mark Stoenis">
-        </div>
-        <div class="form-group">
-            <label for="Email" class="text-light">Email</label>
-            <input type="text" name="email" value="" placeholder="example@gmail.com">
-        </div>
-        <div class="form-group">
-            <label for="gender" class="text-light">Gender</label>
-            <div class="radio inline">
-                <input type="radio" id="radio-2" name="gender" value="Male" >
-                <label for="radio-2" class="radio-label">Male</label>
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                        <div class="new_user">
+                            <div class="form-group">
+                                <label for="name" class="form-label mt-4">Nombre</label>
+                                <input type="hidden" name="id" value="">
+                                <input class="form-control" type="text" name="name" value="" placeholder="Mark Stoenis">
+                            </div>
+                            <div class="form-group">
+                                <label for="Email" class="form-label mt-4">Email</label>
+                                <input class="form-control" type="text" name="email" value="" placeholder="example@gmail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender"class="form-label mt-4">Género</label>
+                                <div class="radio inline">
+                                    <input type="radio" id="radio-2" name="gender" value="Masculino" >
+                                    <label for="radio-2" class="radio-label">Masculino</label>
+                                </div>
+                                <div class="radio inline">
+                                    <input type="radio" id="radio-3" name="gender" value="Femenino" >
+                                    <label for="radio-3" class="radio-label">Femenino</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender" class="form-label mt-4">Contraseña</label>
+                                <input class="form-control" type="text" name="password" value="">
+                            </div>
+                    
+                            <div class="form-group">
+                                <label for="gender" class="form-label mt-4">Estado</label>
+                                <div class="radio inline">
+                                    <input type="radio" id="radio-4" name="status" value="Activo" >
+                                    <label for="radio-4" class="radio-label">Activo</label>
+                                </div>
+                                <div class="radio inline">
+                                    <input type="radio" id="radio-5" name="status" value="Inactivo" >
+                                    <label for="radio-5" class="radio-label">Inactivo</label>
+                                </div>
+                            </div>
+                    
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="radio inline">
-                <input type="radio" id="radio-3" name="gender" value="Female" >
-                <label for="radio-3" class="radio-label">Female</label>
-            </div>
         </div>
-
-        <div class="form-group">
-            <label for="gender" class="text-light">Status</label>
-            <div class="radio inline">
-                <input type="radio" id="radio-4" name="status" value="Active" >
-                <label for="radio-4" class="radio-label">Active</label>
-            </div>
-            <div class="radio inline">
-                <input type="radio" id="radio-5" name="status" value="Inactive" >
-                <label for="radio-5" class="radio-label">Inactive</label>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <button type="submit" class="btn text-dark update">Save</button>
-        </div>
-
-    </div>
+    </div>            
+    
 </form>
