@@ -27,3 +27,27 @@ exports.update_user = (req, res) =>{
             res.send(err);
         })
 }
+
+exports.home_student = (req,res) => {
+    axios.get('http://localhost:3000/api/students')
+    .then(function(response){
+        res.render('students')
+    })
+    .catch(err=>{
+        res.send(err);
+    })
+}
+
+exports.student = (req, res) =>{
+    res.render('add_student');
+}
+
+exports.update_student = (req, res) =>{
+    axios.get('http://localhost:3000/api/students', { params : { id : req.query.id }})
+        .then(function(userdata){
+            res.render("update_students", { user : userdata.data})
+        })
+        .catch(err =>{
+            res.send(err);
+        })
+}
